@@ -16,6 +16,7 @@ message Note {
     string id = 1;
     string title = 2;
     string content = 3;
+    bool done = 4;
 }
 
 message NoteList {
