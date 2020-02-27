@@ -23,12 +23,12 @@ export class NotesController {
     }
 
     @Delete(':id')
-    async delete(@Param() params) {
-        return this.notesService.delete(params.id);
+    async delete(@Param('id') id: string) {
+        return this.notesService.delete(id);
     }
 
     @Get(':id')
-    findOne(@Param() params): Promise<Note> {
-        return this.notesService.get(params.id);
+    findOne(@Param('id') id: string): Promise<Note> {
+        return this.notesService.get(id);
     }
 }
